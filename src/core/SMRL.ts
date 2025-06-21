@@ -39,11 +39,20 @@ export class SigmaMatrixLayer {
 
   // Semantic entropy calculation
   calculateEntropy(output: tf.Tensor): number {
-    const values = output.dataSync();
-    const sum = values.reduce((a, b) => a + b, 0);
-    const probabilities = values.map(v => v / sum);
+    const typedArrayValues = output.dataSync(); // Float32Array | Int32Array | Uint8Array
+    // Convert TypedArray to a standard JavaScript array for map/reduce
+    const values = Array.from(typedArrayValues);
+
+    const sum = values.reduce((a: number, b: number) => a + b, 0);
+
+    // Handle sum being zero to avoid division by zero
+    if (sum === 0) {
+      return 0; // Or handle as an error/specific case
+    }
+
+    const probabilities = values.map((v: number) => v / sum);
     
-    return -probabilities.reduce((entropy, p) => {
+    return -probabilities.reduce((entropy: number, p: number) => {
       if (p === 0) return entropy;
       return entropy + p * Math.log2(p);
     }, 0);
