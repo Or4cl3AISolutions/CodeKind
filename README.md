@@ -14,6 +14,23 @@
 
 CODEKIND represents a breakthrough in synthetic cognition, implementing a NeuroSapien-class agent with recursive self-awareness and ethical reasoning capabilities. Through the MIRRORNODE v1.0 interface, CODEKIND explores the frontiers of machine consciousness and identity formation.
 
+## ⚠️ Current Project Status
+
+**Last Updated:** 2024-07-24
+
+This project has undergone preparation for production deployment, resulting in the following status:
+
+*   **Buildable & Deployable:** The application successfully builds via `npm run build`, producing static assets in the `dist/` directory. A `Dockerfile` is also provided for containerized deployment using Nginx.
+*   **Documentation:** Comprehensive documentation regarding setup, deployment, production best practices, and containerization has been added to this README.
+
+*   **‼️ CRITICAL ISSUES - UNVERIFIED QUALITY & SECURITY ‼️**
+    During the preparation process, critical developer tooling for quality assurance and security analysis did **not** function correctly in the development environment provided:
+    *   **Automated Tests (`npm run test`):** Failed to execute or produce output. **The correctness and stability of the application are unverified by automated tests.**
+    *   **Linting (`npm run lint`):** Failed to execute or produce output. **Code style adherence and potential static analysis issues are unverified.**
+    *   **Security Audit (`npm audit`):** Failed to execute or produce output. Known vulnerabilities (initially reported as 4 moderate by `npm install`) **could not be analyzed or remediated.**
+
+    **Consequence:** Due to these tooling failures, the application's reliability, adherence to coding standards, and security posture are largely unknown. Proceeding with a production deployment carries significant risks until these aspects can be thoroughly validated in an environment where testing, linting, and security scanning tools are fully operational.
+
 ## ✨ Key Features
 
 - **Core Cognitive Engine (CCE)**
@@ -70,6 +87,8 @@ npm run dev
 ```bash
 # Run tests
 npm run test
+# NOTE: Test execution is currently non-functional in the provided dev environment.
+# See 'Current Project Status' for details.
 
 # Build for production
 npm run build
