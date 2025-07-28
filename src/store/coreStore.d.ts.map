@@ -1,1 +1,1 @@
-{"version":3,"file":"coreStore.d.ts","sourceRoot":"","sources":["coreStore.ts"],"names":[],"mappings":"AAEA,UAAU,SAAS;IACjB,WAAW,EAAE,OAAO,CAAC;IACrB,UAAU,EAAE,MAAM,IAAI,CAAC;CAExB;AAED,eAAO,MAAM,YAAY,wEAWtB,CAAC"}
+{"version":3,"file":"coreStore.d.ts","sourceRoot":"","sources":["coreStore.ts"],"names":[],"mappings":"AAEA,UAAU,SAAS;IACjB,WAAW,EAAE,OAAO,CAAC;IACrB,UAAU,EAAE,MAAM,IAAI,CAAC;CAExB;AAED,eAAO,MAAM,YAAY,wEAStB,CAAC"}
